@@ -1,0 +1,24 @@
+{
+    "id": "5DBC72CC",
+    "path": "C:/Users/ncwbsoh/OneDrive-Deere&Co/OneDrive - Deere & Co/Desktop/RProjects/DataCleaningFinalProject/UCI HAR Dataset/activity_labels.txt",
+    "project_path": "UCI HAR Dataset/activity_labels.txt",
+    "type": "text",
+    "hash": "174665653",
+    "contents": "",
+    "dirty": false,
+    "created": 1642003696959.0,
+    "source_on_save": false,
+    "relative_order": 3,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1349906130,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1349906130,
+    "read_only": false,
+    "read_only_alternatives": []
+}
