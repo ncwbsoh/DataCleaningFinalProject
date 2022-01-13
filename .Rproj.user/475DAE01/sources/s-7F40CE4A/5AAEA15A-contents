@@ -1,12 +1,12 @@
 # DataCleaningFinalProject
 
-Here is a breakdown of run_analysis.R in relation ro each of the 5 steps outlined in the assignment:  
+Here is a breakdown of run_analysis.R in relation to each of the 5 steps outlined in the assignment:  
 
 **Part 1**  
  In part 1 I need to load in and properly combine all the existing data into one large data frame. 
  
 To achieve this, I simply load in the datasets, bind the X and Y datasets column wise, then bind the testing and training datasets row wise.
-Note that I rename the y dataset columns to maintain the numbers in the column names for the X dataset, as I will use it later on.
+Note that I rename the y dataset columns to maintain the numbers in the column names for the X dataset, as I will use them later on.
 
     X_test = read.table("UCI HAR Dataset/test/X_test.txt") #Testing Data
     y_test = read.table("UCI HAR Dataset/test/y_test.txt") #Testing Labels
@@ -25,8 +25,7 @@ Note that I rename the y dataset columns to maintain the numbers in the column n
 **Part 2**  
 In part 2 I need to take the complete dataset generated in part 1, and extract only the measurements on the mean and standard deviation from it using the features list.  
 
-To achieve this I use the grepl function to return a list of True or False values depending on if certain keywords determined by a regular expression were present in the features list. I was able to do this because the features are indexed in the same order as the column indices for the original dataset. For the regular expression I explicitly use mean() or std() to ensure I only get the data that was a direct result of these functions.  
-I then add an additional True at the start of this list to retain the activities column.  
+To achieve this I use the grepl function to return a list of True or False values depending on if certain keywords determined by a regular expression were present in the features list. I was able to do this because the features are indexed in the same order as the column indices for the original dataset. For the regular expression I explicitly use mean() or std() to ensure I only get the data that was a direct result of these functions. I then add an additional True at the start of this list to retain the activities column.  
 Finally, I use this list as the y value to extract the correct columns from the original data.
 
     features = read.table("UCI HAR Dataset/features.txt") #Measurement definitions
@@ -66,10 +65,9 @@ In part 5 I need to use the data from part 4 to create a tidy dataset with the a
 
 To achieve this, I first load in the subject data, bind it column wise with the labelled data from part 4, then change the column name to "SubjectNumber" to be more descriptive.  
 I then use the formula method of the aggregate function to both group the data by activity data and subject, and average the values within those groups all at once.  
-Finally I adjust the column names of the measurements to reflect the fact they've been averaged and write the output to a text file (Part5TidyData.txt), which is further described in CodeBook.md.
+Finally I adjust the column names of the measurements to reflect the fact they've been averaged and write the output to a text file (Part5TidyData.txt), which is further described in CodeBook.md.  
+The data within the generated text file is tidy because each column describes only a single named variable and each row describes a single specific observation.
 
-
-    #Loading and combining subject data
     subject_test = read.table("UCI HAR Dataset/test/subject_test.txt")
     subject_train = read.table("UCI HAR Dataset/train/subject_train.txt")
     subjects = rbind(subject_test,subject_train)
@@ -80,7 +78,5 @@ Finally I adjust the column names of the measurements to reflect the fact they'v
     groupMeanData = aggregate(.~ActivityType+SubjectNumber, completeData, mean)
     colnames(groupMeanData)[3:81] = paste("Avg:", colnames(groupMeanData)[3:81])
     
-    write.table(groupMeanData, file = "Part5TidyData.txt") #End of part 5
+    write.table(groupMeanData, file = "Part5TidyData.txt") 
 
-  
-I believe the data within the generated text file is tidy because each column describes only a single named variable and each row describes a single specific observation.
