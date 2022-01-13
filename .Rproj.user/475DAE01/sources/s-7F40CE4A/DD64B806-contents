@@ -19,24 +19,24 @@
 Avg: - indicates that this value is the average grouped by the activity type and subject number.
     
    'measurement'-'direction'(if applicable): - indicates which measurement is manipulated and whether it has any direction.
-    tBodyAcc-XYZ
-    tGravityAcc-XYZ
-    tBodyAccJerk-XYZ
-    tBodyGyro-XYZ
-    tBodyGyroJerk-XYZ
-    tBodyAccMag
-    tGravityAccMag
-    tBodyAccJerkMag
-    tBodyGyroMag
-    tBodyGyroJerkMag
-    fBodyAcc-XYZ
-    fBodyAccJerk-XYZ
-    fBodyGyro-XYZ
-    fBodyAccMag
-    fBodyAccJerkMag
-    fBodyGyroMag
-    fBodyGyroJerkMag
+   tBodyAcc-XYZ
+   tGravityAcc-XYZ
+   tBodyAccJerk-XYZ
+   tBodyGyro-XYZ
+   tBodyGyroJerk-XYZ
+   tBodyAccMag
+   tGravityAccMag
+   tBodyAccJerkMag
+   tBodyGyroMag
+   tBodyGyroJerkMag
+   fBodyAcc-XYZ
+   fBodyAccJerk-XYZ
+   fBodyGyro-XYZ
+   fBodyAccMag
+   fBodyAccJerkMag
+   fBodyGyroMag
+   fBodyGyroJerkMag
     
    'function': - indicates which function was used  on the original measurement before being grouped and averaged.
-    mean(): Mean value
-    std(): Standard deviation
+   mean(): Mean value
+   std(): Standard deviation
