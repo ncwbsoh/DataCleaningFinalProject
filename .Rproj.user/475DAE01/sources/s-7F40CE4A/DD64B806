@@ -3,7 +3,7 @@
     "path": "C:/Users/ncwbsoh/OneDrive-Deere&Co/OneDrive - Deere & Co/Desktop/RProjects/DataCleaningFinalProject/CodeBook.md",
     "project_path": "CodeBook.md",
     "type": "markdown",
-    "hash": "1514792138",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1642090534460.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "42,0",
-        "scrollLine": "12"
+        "cursorPosition": "43,0",
+        "scrollLine": "4"
     },
     "folds": "",
-    "lastKnownWriteTime": 1642093379,
+    "lastKnownWriteTime": 1642096737,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1642093379510,
+    "last_content_update": 1642096737,
     "read_only": false,
     "read_only_alternatives": []
 }

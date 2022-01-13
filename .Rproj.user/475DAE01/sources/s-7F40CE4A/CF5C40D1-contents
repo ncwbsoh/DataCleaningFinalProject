@@ -42,8 +42,6 @@ labelledData = cbind(activityVector, extractedData[,2:80]) #End of part 3
 
 
 #---------------------------------Part 4----------------------------------------
-features = read.table("UCI HAR Dataset/features.txt") #Column labels
-
 #Removing V from the non-descriptive columns then transform to numeric to act
 #as indices for the next step
 indices = as.numeric(gsub("V","",colnames(labelledData)[2:80]))
