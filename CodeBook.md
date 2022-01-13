@@ -16,9 +16,9 @@
 3-81: Naming convention explained below - numeric
     Format: "Avg: measurement-function()-direction"
     
-    Avg: - indicates that this value is the average grouped by the activity type and subject number.
+Avg: - indicates that this value is the average grouped by the activity type and subject number.
     
-    'measurement'-'direction'(if applicable): - indicates which measurement is manipulated and whether it has any direction.
+   'measurement'-'direction'(if applicable): - indicates which measurement is manipulated and whether it has any direction.
     tBodyAcc-XYZ
     tGravityAcc-XYZ
     tBodyAccJerk-XYZ
@@ -37,6 +37,6 @@
     fBodyGyroMag
     fBodyGyroJerkMag
     
-    'function': - indicates which function was used  on the original measurement before being grouped and averaged.
+   'function': - indicates which function was used  on the original measurement before being grouped and averaged.
     mean(): Mean value
     std(): Standard deviation
