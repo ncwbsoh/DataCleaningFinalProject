@@ -18,8 +18,8 @@ data = rbind(test, train) #Total combined data, end of part 1
 features = read.table("UCI HAR Dataset/features.txt") #Measurement definitions
 
 #Use regular expression to determine all the features that contain a mean or 
-#standard deviation, use grepl to return a vector of TRUE/FALSE values
-boolStdMean = grepl("[Mm]ean|std", features$V2)
+#standard deviation function, use grepl to return a vector of TRUE/FALSE values
+boolStdMean = grepl("mean()|std()", features$V2)
 
 #add an additional TRUE at the start to account for the activities column
 boolComplete = c(TRUE, boolStdMean)
@@ -38,7 +38,7 @@ activityVector = act_labels[extractedData$activities,]$V2
 
 #Then simply bind this new vector with the extracted data, replacing first
 #column with these new more descriptive labels
-labelledData = cbind(activityVector, extractedData[,2:87]) #End of part 3
+labelledData = cbind(activityVector, extractedData[,2:80]) #End of part 3
 
 
 #---------------------------------Part 4----------------------------------------
@@ -46,13 +46,13 @@ features = read.table("UCI HAR Dataset/features.txt") #Column labels
 
 #Removing V from the non-descriptive columns then transform to numeric to act
 #as indices for the next step
-indices = as.numeric(gsub("V","",colnames(labelledData)[2:87]))
+indices = as.numeric(gsub("V","",colnames(labelledData)[2:80]))
 
 #Use the same process as in Part 3 generate a vector of column labels
 columnLabels = features[indices,]$V2
 
 #Assign the numbered columns the feature names
-colnames(labelledData)[2:87] = columnLabels
+colnames(labelledData)[2:80] = columnLabels
 #Assign the first column something more descriptive
 colnames(labelledData)[1] = "ActivityType" #End of part 4
 
@@ -73,7 +73,7 @@ colnames(completeData)[1] = "SubjectNumber"
 #by activity type and subject
 groupMeanData = aggregate(.~ActivityType+SubjectNumber, completeData, mean)
 #Adjust the column names to reflect the fact the data's been averaged out
-colnames(groupMeanData)[3:88] = paste("Avg:", colnames(groupMeanData)[3:88])
+colnames(groupMeanData)[3:81] = paste("Avg:", colnames(groupMeanData)[3:81])
 #This dataset is Tidy since each column has a unique, descriptive variable, and 
 #each row is composed of an individual observation
 
