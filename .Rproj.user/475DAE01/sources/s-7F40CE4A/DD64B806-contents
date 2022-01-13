@@ -1,3 +1,5 @@
+This code book describes the variables for the table within the "Part5TidyData.txt" file. 
+
 **1: ActivityType** - character
     The type of activity the subject was performing during measurement from the following list:  
     WALKING  

@@ -66,7 +66,7 @@ In part 5 I need to use the data from part 4 to create a tidy dataset with the a
 
 To achieve this, I first load in the subject data, bind it column wise with the labelled data from part 4, then change the column name to "SubjectNumber" to be more descriptive.  
 I then use the formula method of the aggregate function to both group the data by activity data and subject, and average the values within those groups all at once.  
-Finally I adjust the column names of the measurements to reflect the fact they've been averaged and write the output to a text file (Part5TidyData.txt).
+Finally I adjust the column names of the measurements to reflect the fact they've been averaged and write the output to a text file (Part5TidyData.txt), which is further described in CodeBook.md.
 
 
     #Loading and combining subject data
